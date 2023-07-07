@@ -2,7 +2,7 @@
 terraform {
   required_providers {
     aws = {
-      source  = "hashicorp/azure"
+      source  = "hashicorp/aws"
       
     }
   }
@@ -17,7 +17,7 @@ provider "azure" {
 #Resource Block
 resource "aws_instance" "ec2testserver" {
   ami           = "ami-041db4a969fe3eb68" 
-  instance_type = "B2s"
+  instance_type = "t2.micro"
 
 }
 
